@@ -1,0 +1,23 @@
+:root {
+  color: #1d2637;
+  background: #f6f7f9;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  color: #17243b;
+  background: #e9d8b2;
+}

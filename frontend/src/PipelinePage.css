@@ -1,0 +1,246 @@
+.pipeline-page {
+    padding: 32px;
+    color: #17243a;
+    background: #f7f8fb;
+    min-height: 100%;
+}
+
+.pipeline-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.pipeline-heading h1 {
+    margin: 8px 0;
+    font-size: clamp(28px, 4vw, 38px);
+    letter-spacing: -1px;
+}
+
+.pipeline-heading p {
+    color: #687386;
+}
+
+.pipeline-eyebrow {
+    color: #a27e40 !important;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.pipeline-stat {
+    padding: 18px 24px;
+    background: #17243a;
+    color: white;
+    border-radius: 14px;
+    min-width: 150px;
+}
+
+.pipeline-stat span {
+    display: block;
+    color: #d8c294;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.pipeline-stat strong {
+    display: block;
+    font-size: 30px;
+    margin-top: 6px;
+}
+
+.pipeline-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    padding: 24px;
+    background: white;
+    border: 1px solid #e7e9ef;
+    border-radius: 16px;
+    margin-bottom: 28px;
+}
+
+.pipeline-form>div:first-child {
+    grid-column: 1 / -1;
+}
+
+.pipeline-form h2 {
+    margin: 0 0 6px;
+}
+
+.pipeline-form p {
+    color: #748094;
+    margin: 0;
+}
+
+.pipeline-form label,
+.pipeline-card label {
+    display: grid;
+    gap: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #465268;
+}
+
+.pipeline-form input,
+.pipeline-form select,
+.pipeline-card select {
+    width: 100%;
+    min-width: 0;
+    padding: 11px;
+    border: 1px solid #dfe3eb;
+    border-radius: 9px;
+    background: white;
+    color: #17243a;
+    font: inherit;
+}
+
+.pipeline-form button {
+    grid-column: 1 / -1;
+    padding: 13px 18px;
+    background: #17243a;
+    color: white;
+    border: 1px solid #c5a66b;
+    border-radius: 9px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.pipeline-form button:hover {
+    background: #263956;
+}
+
+.pipeline-form button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.pipeline-board {
+    display: grid;
+    grid-auto-columns: minmax(245px, 1fr);
+    grid-auto-flow: column;
+    gap: 16px;
+    overflow-x: auto;
+    align-items: start;
+    padding-bottom: 16px;
+}
+
+.pipeline-column {
+    min-width: 245px;
+    padding: 14px;
+    border: 1px solid #e6e8ef;
+    border-radius: 14px;
+    background: #f0f2f7;
+}
+
+.pipeline-column-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.pipeline-column-heading h2 {
+    font-size: 13px;
+    margin: 0;
+}
+
+.pipeline-column-heading span {
+    display: grid;
+    place-items: center;
+    min-width: 25px;
+    height: 25px;
+    border-radius: 8px;
+    background: #e1d3b4;
+    color: #624b24;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.pipeline-card {
+    padding: 16px;
+    margin-bottom: 12px;
+    background: white;
+    border: 1px solid #e1e5ed;
+    border-top: 3px solid #c5a66b;
+    border-radius: 11px;
+    box-shadow: 0 4px 12px rgba(20, 32, 52, 0.04);
+}
+
+.pipeline-card-id {
+    color: #a27e40;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.pipeline-card h3 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+}
+
+.pipeline-job,
+.pipeline-notes {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #687386;
+    overflow-wrap: anywhere;
+}
+
+.pipeline-card label {
+    margin-top: 16px;
+}
+
+.pipeline-column-empty,
+.pipeline-empty {
+    color: #8791a2;
+    font-size: 13px;
+    text-align: center;
+    padding: 22px 10px;
+}
+
+.pipeline-empty {
+    background: white;
+    border: 1px dashed #d8dce6;
+    border-radius: 14px;
+}
+
+.pipeline-alert {
+    padding: 13px 16px;
+    margin-bottom: 16px;
+    border-radius: 9px;
+    font-size: 13px;
+}
+
+.pipeline-alert.error {
+    background: #fff0ef;
+    color: #a62e2e;
+}
+
+.pipeline-alert.success {
+    background: #edf8f0;
+    color: #21683a;
+}
+
+@media (max-width: 640px) {
+    .pipeline-page {
+        padding: 18px;
+    }
+
+    .pipeline-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .pipeline-form {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+
+    .pipeline-form>div:first-child,
+    .pipeline-form button {
+        grid-column: auto;
+    }
+}
